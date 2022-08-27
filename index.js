@@ -7,7 +7,7 @@ const authRoute = require("./routes/auth-route");
 
 mongoose
   .connect(
-    "mongodb+srv://user_1:SS3uvIlGsPZpsna6@cluster0.ooo7zht.mongodb.net/?retryWrites=true&w=majority"
+    `mongodb+srv://user_1:${process.env.mongodbpassword}@cluster0.ooo7zht.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
     console.log("Connect to mongodb atlas.");
